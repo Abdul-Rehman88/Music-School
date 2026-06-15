@@ -41,7 +41,9 @@
     }} />
   </head>
   <body className="min-h-full flex flex-col bg-[#f0f0f0] text-black dark:bg-black dark:text-white" suppressHydrationWarning>
-    <Navbar />
+    <div className="relative w-full flex justify-center items-center">
+      <Navbar />
+    </div>
     {children}
     <ThemeToggle />
   </body>
