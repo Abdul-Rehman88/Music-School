@@ -1,4 +1,6 @@
 @import "tailwindcss";
+/* @plugin "./plugins/add-variables-for-colors.ts"; */
+
 
 @custom-variant dark (&:where(.dark, .dark *));
 

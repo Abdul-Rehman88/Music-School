@@ -1,8 +1,9 @@
+import HeroBanner from '@/components/HeroBanner';
 export default function Home() {
   return (
       <>
-        <main className="flex-1 flex items-center justify-center">
-          <h1 className="text-4xl font-bold">Welcome to Music App</h1>
+        <main className=" antialiased bg-grid-white/[0.02]">
+          <HeroBanner />
         </main>
       </>   
    );

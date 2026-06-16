@@ -40,7 +40,7 @@
       `
     }} />
   </head>
-  <body className="min-h-full flex flex-col bg-[#f0f0f0] text-black dark:bg-black dark:text-white" suppressHydrationWarning>
+  <body className="min-h-full flex flex-col bg-[#f5f4ff] text-black dark:bg-black dark:text-white" suppressHydrationWarning>
     <div className="relative w-full flex justify-center items-center">
       <Navbar />
     </div>
