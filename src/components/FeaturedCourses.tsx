@@ -1,4 +1,4 @@
-"use client"
+'use client';
 import React from 'react'
 import { BackgroundGradient } from "./ui/background-gradient"
 import CourseData from "../data/music_courses.json"
@@ -25,7 +25,7 @@ function FeaturedCourses() {
         </div>
         <div className="w-full mt-10 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 items-center justify-center">
           {featuredCourses.map((course:Course) => (
-            <BackgroundGradient
+            <BackgroundGradient key={course.id} 
               className="flex flex-col rounded-[22px] bg-white dark:bg-zinc-900 overflow-hidden h-full max-w-sm">
                 <div className="p-4 flex flex-col items-center text-center gap-4 grow">
                   <div className="flex flex-col items-center text-center ">
