@@ -1,9 +1,58 @@
 @import "tailwindcss";
-/* @plugin "./plugins/add-variables-for-colors.ts"; */
-
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 * {
   transition: background-color 1.5s ease, color 0.3s ease, border-color 1.5s ease;
 }
+
+@theme {
+  /* Background */
+  --color-bg-light: #F8F7FC;
+  --color-bg-dark: #08090D;
+
+  --color-card-light: #FFFFFF;
+  --color-card-dark: #11131A;
+
+  /* Headings */
+  --color-heading-light: #7F77DD;
+  --color-heading-dark: #EF9F27;
+
+  --color-secondary-light: #4B3FB8;
+  --color-secondary-dark: #D8D4FF;
+
+  /* Paragraph */
+  --color-text-light: #6B7280;
+  --color-text-dark: #9CA3AF;
+}
+/* Gas cones */
+.gas-cone {
+  position: absolute;
+  width: 55%;
+  height: 55%;
+  border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--fog-color) 75%, transparent), transparent 70%);
+  filter: blur(12px);
+  transform: scale(0.15);
+  opacity: 0;
+  transition: opacity 0.4s ease; /* only addition vs the demo: graceful fade on mouse-leave */
+}
+
+.gas-cone-tl { top: 0; left: 0; transform-origin: top left; }
+.gas-cone-tr { top: 0; right: 0; transform-origin: top right; }
+.gas-cone-bl { bottom: 0; left: 0; transform-origin: bottom left; }
+.gas-cone-br { bottom: 0; right: 0; transform-origin: bottom right; }
+
+.dark .gas-cone {
+  --fog-color: var(--fog-color-dark);
+}
+
+.group:hover .gas-cone-tl { animation: pluckTL 2.4s cubic-bezier(.34,1.56,.64,1) infinite 0s; }
+.group:hover .gas-cone-tr { animation: pluckTR 2.4s cubic-bezier(.34,1.56,.64,1) infinite .15s; }
+.group:hover .gas-cone-br { animation: pluckBR 2.4s cubic-bezier(.34,1.56,.64,1) infinite .3s; }
+.group:hover .gas-cone-bl { animation: pluckBL 2.4s cubic-bezier(.34,1.56,.64,1) infinite .45s; }
+
+@keyframes pluckTL { 0%{transform:scale(.15) rotate(0deg);opacity:0;} 10%{transform:scale(2.5) rotate(3deg);opacity:1;} 22%{transform:scale(2.05) rotate(1deg);opacity:.85;} 68%{transform:scale(2.05) rotate(1deg);opacity:.8;} 100%{transform:scale(.15) rotate(0deg);opacity:0;} }
+@keyframes pluckTR { 0%{transform:scale(.15) rotate(0deg);opacity:0;} 10%{transform:scale(2.5) rotate(-3deg);opacity:1;} 22%{transform:scale(2.05) rotate(-1deg);opacity:.85;} 68%{transform:scale(2.05) rotate(-1deg);opacity:.8;} 100%{transform:scale(.15) rotate(0deg);opacity:0;} }
+@keyframes pluckBL { 0%{transform:scale(.15) rotate(0deg);opacity:0;} 10%{transform:scale(2.5) rotate(-3deg);opacity:1;} 22%{transform:scale(2.05) rotate(-1deg);opacity:.85;} 68%{transform:scale(2.05) rotate(-1deg);opacity:.8;} 100%{transform:scale(.15) rotate(0deg);opacity:0;} }
+@keyframes pluckBR { 0%{transform:scale(.15) rotate(0deg);opacity:0;} 10%{transform:scale(2.5) rotate(3deg);opacity:1;} 22%{transform:scale(2.05) rotate(1deg);opacity:.85;} 68%{transform:scale(2.05) rotate(1deg);opacity:.8;} 100%{transform:scale(.15) rotate(0deg);opacity:0;} }

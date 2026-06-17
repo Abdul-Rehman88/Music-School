@@ -12,7 +12,7 @@ function HeroBanner() {
 
         {/* Content sits above the canvas via z-index */}
         <div className="relative z-10 flex flex-col items-center gap-4 text-center px-4">
-          <h1 className="w-52.5 md:w-62.5 lg:w-100 text-4xl font-bold  dark:text-[#EF9F27] text-[#7F77DD] transition-colors duration-300">
+          <h1 className="w-52.5 md:w-62.5 lg:w-100 text-4xl font-bold  dark:text-text-dark text-text-light transition-colors duration-300">
             Master the art of music
           </h1>
           <p className="text-[16px] md:text-[18px] text-gray-600 dark:text-gray-400 w-85 md:w-100 lg:w-150">
