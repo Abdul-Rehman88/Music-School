@@ -12,17 +12,17 @@ function HeroBanner() {
 
         {/* Content sits above the canvas via z-index */}
         <div className="relative z-10 flex flex-col items-center gap-4 text-center px-4">
-          <h1 className="w-52.5 md:w-62.5 lg:w-100 text-4xl font-bold  dark:text-text-dark text-text-light transition-colors duration-300">
+          <h1 className="w-52.5 md:w-62.5 lg:w-100 text-primary-heading font-bold dark:text-primary-heading-dark text-primary-heading-light transition-colors duration-300">
             Master the art of music
           </h1>
-          <p className="text-[16px] md:text-[18px] text-gray-600 dark:text-gray-400 w-85 md:w-100 lg:w-150">
+          <p className="text-primary dark:text-text-dark text-text-light w-85 md:w-100 lg:w-150">
             Dive into our comprehensive music courses and transform your musical journey today. Whether you're a beginner or looking to refine your skills, join us to unlock your true potential.
           </p>
           <div className="mt-4">
             <Link href={"/courses"}>
               <Button
                 borderRadius="1.75rem"
-                className="bg-white dark:bg-black text-black dark:text-white border-neutral-200 dark:border-slate-800"
+                className="text-center bg-cta-light dark:bg-cta-dark text-cta-text-light dark:text-cta-text-dark border-neutral-200 dark:border-slate-800"
               >
                 Explore courses
               </Button>

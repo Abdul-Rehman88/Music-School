@@ -3,8 +3,6 @@ import React from "react";
 import { motion } from "motion/react";
 import Link from "next/link";
 
-
-
 const transition = {
   type: "spring" as const,
   mass: 0.5,
@@ -84,7 +82,7 @@ export const Menu = ({
   return (
     <nav
       onMouseLeave={() => setActive(null)} // resets the state
-      className="relative rounded-full border border-transparent dark:bg-white/90 dark:border-white/20 bg-black/90 shadow-input flex justify-center space-x-3 sm:space-x-4 px-8 py-5 "
+      className="relative rounded-full border bg-primary-dark  dark:bg-primary-light border-dark dark:border-white shadow-input flex justify-center space-x-3 sm:space-x-4 px-8 py-5 "
     >
       {children}
     </nav>

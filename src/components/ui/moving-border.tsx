@@ -18,8 +18,8 @@ export function Button({
   borderClassName,
   duration,
   className,
-  fogColor = "#7F77DD",
-  fogColorDark = "#0ea5e9",
+  fogColor = "#0ea5e9",
+  fogColorDark = "#EF9F27",
   ...otherProps
 }: {
   borderRadius?: string;

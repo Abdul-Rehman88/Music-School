@@ -7,24 +7,66 @@
 }
 
 @theme {
-  /* Background */
-  --color-bg-light: #F8F7FC;
-  --color-bg-dark: #08090D;
+  /* Section backgrounds — light */
+  --color-badge-light: #EF9F27;        
+  --color-primary-light: #F8F7FC;          
+  --color-secondary-light: #E6E1FA;  
+  --color-alt-light: #F0EDF9;      
 
-  --color-card-light: #FFFFFF;
-  --color-card-dark: #11131A;
+  /* Section backgrounds — dark */
+  --color-badge-dark: #F0EDF9;        
+  --color-primary-dark: #08090D;
+  --color-secondary-dark: #15131F;
+  --color-alt-dark: #0D0F16;
 
-  /* Headings */
-  --color-heading-light: #7F77DD;
-  --color-heading-dark: #EF9F27;
+  /* Text colors - light */
+  --color-primary-heading-light: #0A4D7E;
+  --color-secondary-heading-light: #1B6FA0;
+  --color-text-light: #4A2B05;
 
-  --color-secondary-light: #4B3FB8;
-  --color-secondary-dark: #D8D4FF;
+  
+  /* text colors — dark */
+  --color-primary-heading-dark: #EF9F27;
+  --color-secondary-heading-dark: #D97B29;
+  --color-text-dark: #D2CEEF;
 
-  /* Paragraph */
-  --color-text-light: #6B7280;
-  --color-text-dark: #9CA3AF;
+  
+  /* CTA colors light */
+  --color-cta-light: #15131F;  
+  --color-cta-text-light: #E6E1FA;
+  
+  
+  /* CTA colors dark */
+  --color-cta-dark: #E6E1FA;
+  --color-cta-text-dark: #15131F;
+  
+  --color-extra-s: #0ea5e9;
+  --color-extra-b: #7F77DD;
+
+  --color-card-light: #11131A;
+  --color-card-dark: #FFFFFF;
+
+/* Typography — fluid sizes, scale themselves between mobile and desktop */
+  --text-primary-heading: clamp(2.25rem, 1.67rem + 2.31vw, 3.75rem);
+  --text-primary-heading--line-height: 1.1;
+
+  --text-secondary-heading: clamp(1.75rem, 1.46rem + 1.15vw, 2.5rem);
+  --text-secondary-heading--line-height: 1.2;
+
+  --text-subheading: clamp(1.25rem, 1.15rem + 0.38vw, 1.5rem);
+  --text-subheading--line-height: 1.3;
+
+  --text-primary: clamp(1rem, 0.98rem + 0.09vw, 1.0625rem);
+  --text-primary--line-height: 1.6;
+
+  --text-secondary: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
+  --text-secondary--line-height: 1.5;
+
+  --text-button: clamp(2.25rem, 1.67rem + 2.31vw, 3.75rem);
+  --text-button--line-height: 1;
 }
+
+
 /* Gas cones */
 .gas-cone {
   position: absolute;
