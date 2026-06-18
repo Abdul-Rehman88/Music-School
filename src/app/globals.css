@@ -32,12 +32,12 @@
 
   
   /* CTA colors light */
-  --color-cta-light: #15131F;  
+  --color-cta-bg-light: #15131F;  
   --color-cta-text-light: #E6E1FA;
   
   
   /* CTA colors dark */
-  --color-cta-dark: #E6E1FA;
+  --color-cta-bg-dark: #E6E1FA;
   --color-cta-text-dark: #15131F;
   
   --color-extra-s: #0ea5e9;

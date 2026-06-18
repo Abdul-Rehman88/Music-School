@@ -37,7 +37,7 @@ function FeaturedCourses() {
                   {/* <Link href={`/courses/${course.slug}`}> */}
                     <Button
                       borderRadius="1.75rem"
-                      className="text-center bg-cta-light dark:bg-cta-dark text-cta-text-light dark:text-cta-text-dark border-neutral-200 dark:border-slate-800"
+                      className="text-center bg-cta-bg-light dark:bg-cta-bg-dark text-cta-text-light dark:text-cta-text-dark border-neutral-200 dark:border-slate-800"
                       >
                       Learn More
                     </Button>
@@ -51,7 +51,7 @@ function FeaturedCourses() {
           <Link href="/courses">
             <Button
               borderRadius="1.75rem"
-              className="bg-cta-light dark:bg-cta-dark text-cta-text-light dark:text-cta-text-dark border-neutral-200 dark:border-slate-800"
+                className="text-center bg-cta-bg-light dark:bg-cta-bg-dark text-cta-text-light dark:text-cta-text-dark border-neutral-200 dark:border-slate-800"
             >
               View All Courses
             </Button>

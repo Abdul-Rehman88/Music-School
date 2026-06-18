@@ -22,7 +22,7 @@ function HeroBanner() {
             <Link href={"/courses"}>
               <Button
                 borderRadius="1.75rem"
-                className="text-center bg-cta-light dark:bg-cta-dark text-cta-text-light dark:text-cta-text-dark border-neutral-200 dark:border-slate-800"
+                className="text-center bg-cta-bg-light dark:bg-cta-bg-dark text-cta-text-light dark:text-cta-text-dark border-neutral-200 dark:border-slate-800"
               >
                 Explore courses
               </Button>
