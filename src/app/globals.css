@@ -62,9 +62,12 @@
   --text-secondary: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
   --text-secondary--line-height: 1.5;
 
-  --text-button: clamp(2.25rem, 1.67rem + 2.31vw, 3.75rem);
+ --text-button: clamp(0.8125rem,  0.79rem + 0.1vw, 0.875rem);
   --text-button--line-height: 1;
 }
+/* replace it after the bug is fixed (bug not applied the font)  */
+/* --text-button: clamp(0.875rem, 0.83rem + 0.19vw, 1rem);
+  --text-button--line-height: 1;
 
 
 /* Gas cones */

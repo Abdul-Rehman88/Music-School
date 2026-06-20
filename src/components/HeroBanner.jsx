@@ -12,7 +12,7 @@ function HeroBanner() {
 
         {/* Content sits above the canvas via z-index */}
         <div className="relative z-10 flex flex-col items-center gap-4 text-center px-4">
-          <h1 className="w-52.5 md:w-62.5 lg:w-100 text-primary-heading font-bold dark:text-primary-heading-dark text-primary-heading-light transition-colors duration-300">
+          <h1 className="w-54.5 md:w-64.5 lg:w-100 text-primary-heading font-bold dark:text-primary-heading-dark text-primary-heading-light transition-colors duration-300">
             Master the art of music
           </h1>
           <p className="text-primary dark:text-text-dark text-text-light w-85 md:w-100 lg:w-150">
@@ -22,7 +22,7 @@ function HeroBanner() {
             <Link href={"/courses"}>
               <Button
                 borderRadius="1.75rem"
-                className="text-center bg-cta-bg-light dark:bg-cta-bg-dark text-cta-text-light dark:text-cta-text-dark border-neutral-200 dark:border-slate-800"
+                className="text-center font-bold bg-cta-bg-light dark:bg-cta-bg-dark text-cta-text-light dark:text-cta-text-dark border-neutral-200 dark:border-slate-800"
               >
                 Explore courses
               </Button>

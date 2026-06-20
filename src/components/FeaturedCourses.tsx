@@ -23,26 +23,15 @@ function FeaturedCourses() {
             <h2 className="text-secondary-heading font-bold text-secondary-heading-light dark:text-secondary-heading-dark">Featured Courses</h2>
             <p className="text-[16px] md:text-[17px] text-text-light dark:text-text-dark">Explore our handpicked selection of courses designed to elevate your skills and knowledge.</p>
         </div>
-        <div className="w-full mt-10 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 items-center justify-center">
+        <div className="min-w-full md:min-w-95 mt-10 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-7.5 lg:gap-10 items-center justify-center">
           {featuredCourses.map((course:Course) => (
-            <BackgroundGradient key={course.id} 
-              className="flex flex-col rounded-[22px] bg-white dark:bg-zinc-900 overflow-hidden h-full max-w-sm">
-                <div className="p-4 flex flex-col items-center text-center gap-4 grow">
-                  <div className="flex flex-col items-center text-center ">
-                    <h3 className="text-subheading text-black mt-4 mb-2 dark:text-neutral-200">{course.title}</h3>
-                    <p className="w-85 text-secondary text-neutral-600 dark:text-neutral-400 grow">{course.description}</p>
+            <BackgroundGradient key={course.id } buttonLink="/" buttonLinkText="Learn more"  
+              className="w-full flex flex-col rounded-[22px] bg-white dark:bg-zinc-900 overflow-hidden h-full max-w-sm">
+                <div >
+                  <div className=" flex flex-col items-center text-center ">
+                    <h3 className="text-subheading text-black  dark:text-neutral-200">{course.title}</h3>
+                    <p className=" md:w-70 text-secondary text-neutral-600 dark:text-neutral-400 grow">{course.description}</p>
                   </div>
-                  <div>
-
-                  {/* <Link href={`/courses/${course.slug}`}> */}
-                    <Button
-                      borderRadius="1.75rem"
-                      className="text-center bg-cta-bg-light dark:bg-cta-bg-dark text-cta-text-light dark:text-cta-text-dark border-neutral-200 dark:border-slate-800"
-                      >
-                      Learn More
-                    </Button>
-                  {/* </Link> */}
-                      </div>
                 </div>
             </BackgroundGradient>
             ))}
@@ -51,9 +40,9 @@ function FeaturedCourses() {
           <Link href="/courses">
             <Button
               borderRadius="1.75rem"
-                className="text-center bg-cta-bg-light dark:bg-cta-bg-dark text-cta-text-light dark:text-cta-text-dark border-neutral-200 dark:border-slate-800"
+              className="text-center bg-cta-bg-light dark:bg-cta-bg-dark text-cta-text-light dark:text-cta-text-dark border-neutral-200 dark:border-slate-800"
             >
-              View All Courses
+              View all Courses
             </Button>
           </Link>
         </div>

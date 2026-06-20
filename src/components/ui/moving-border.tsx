@@ -38,7 +38,7 @@ export function Button({
   return (
     <Component
       className={cn(
-        "relative h-16 w-40 overflow-hidden bg-transparent p-px text-xl",
+  "relative w-full overflow-hidden bg-transparent p-px transition-all duration-500 active:scale-95 active:translate-y-0.5 ",
         containerClassName,
       )}
       style={{
@@ -62,7 +62,7 @@ export function Button({
 
       <div
         className={cn(
-          "group relative flex h-full w-full items-center justify-center overflow-hidden border border-slate-800 bg-slate-900/80 text-sm text-white antialiased backdrop-blur-xl",
+          "group relative flex h-full w-full items-center justify-center overflow-hidden border border-slate-800 bg-slate-900/80  text-white antialiased backdrop-blur-xl",
           className,
         )}
         style={{ borderRadius: `calc(${borderRadius} * 0.96)` }}
@@ -137,7 +137,7 @@ export function Button({
           <span className="gas-cone gas-cone-br" />
         </div>
 
-        <span className="relative z-10">{children}</span>
+        <span className="relative z-10  px-6 py-4.5 text-button capitalize font-semibold">{children}</span>
       </div>
     </Component>
   );
