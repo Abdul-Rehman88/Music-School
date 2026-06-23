@@ -28,7 +28,7 @@ function FeaturedCourses() {
             <BackgroundGradient key={course.id } buttonLink="/" buttonLinkText="Learn more"  
               className="w-full flex flex-col rounded-[22px] bg-white dark:bg-zinc-900 overflow-hidden h-full max-w-sm">
                 <div >
-                  <div className=" flex flex-col items-center text-center ">
+                  <div className=" flex flex-col items-center gap-2 text-center ">
                     <h3 className="text-subheading text-black  dark:text-neutral-200">{course.title}</h3>
                     <p className=" md:w-70 text-secondary text-neutral-600 dark:text-neutral-400 grow">{course.description}</p>
                   </div>

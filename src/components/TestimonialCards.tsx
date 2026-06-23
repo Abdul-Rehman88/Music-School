@@ -37,14 +37,13 @@ const musicSchoolTestimonials = [
 function TestimonialCards() {
   return (
     <div className="bg-alt-light dark:bg-alt-dark w-full h-120 bg-grid-black/[0.2] dark:bg-grid-white/[0.2] relative flex flex-col items-center gap-7.5 overflow-hidden px-4 py-5 md:px-7.5 md:py-12 lg:px-12.5">
-     <div
-  className={cn(
-    "absolute inset-0",
-    "bg-size-[20px_20px]",
-    "bg-[radial-gradient(var(--color-primary-heading-dark)_1.5px,transparent_1.5px)] opacity-70",
-    "dark:bg-[radial-gradient(var(--color-secondary-heading-light)_1.5px,transparent_1.5px)] dark:opacity-60",
-  )}
-/>
+      <div 
+        className={cn(
+          "absolute inset-0 bg-size-[20px_20px]",
+          "bg-[radial-gradient(var(--color-primary-heading-dark)_1.5px,transparent_1.5px)] opacity-70",
+          "dark:bg-[radial-gradient(var(--color-secondary-heading-light)_1.5px,transparent_1.5px)]dark:opacity-60",
+        )}
+     />
       <div className="w-full flex flex-col gap-4 items-center justify-start text-center">
         <h2 className="text-secondary-heading font-bold text-secondary-heading-light dark:text-secondary-heading-dark">Testimonials</h2>
         <p className="text-[16px] md:text-[17px] text-text-light dark:text-text-dark">
