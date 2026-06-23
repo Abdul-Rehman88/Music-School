@@ -1,6 +1,7 @@
 import FeaturedCourses from '@/components/FeaturedCourses';
 import HeroBanner from '@/components/HeroBanner';
 import WhyChooseUs from '@/components/WhyChooseUs';
+import TestimonialCards from '@/components/TestimonialCards';
 export default function Home() {
   return (
       <>
@@ -8,6 +9,7 @@ export default function Home() {
           <HeroBanner />
           <FeaturedCourses />
           <WhyChooseUs />
+          <TestimonialCards />
         </main>
       </>   
    );

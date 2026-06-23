@@ -6,6 +6,17 @@
   transition: background-color 1.5s ease, color 0.3s ease, border-color 1.5s ease;
 }
 
+/* ===== Scroll animation used in infinite-moving-cards ===== */
+@theme inline {
+  --animate-scroll: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
+ 
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
+}
+
 @theme {
   /* Section backgrounds — light */
   --color-badge-light: #EF9F27;        
@@ -40,9 +51,6 @@
   --color-cta-bg-dark: #E6E1FA;
   --color-cta-text-dark: #15131F;
   
-  --color-extra-s: #0ea5e9;
-  --color-extra-b: #7F77DD;
-
   --color-card-light: #11131A;
   --color-card-dark: #FFFFFF;
 
@@ -66,7 +74,7 @@
   --text-button--line-height: 1;
 }
 
-/* Gas cones */
+/* button animation on hover */
 .gas-cone {
   position: absolute;
   width: 55%;
@@ -76,7 +84,7 @@
   filter: blur(12px);
   transform: scale(0.15);
   opacity: 0;
-  transition: opacity 0.4s ease; /* only addition vs the demo: graceful fade on mouse-leave */
+  transition: opacity 0.4s ease; 
 }
 
 .gas-cone-tl { top: 0; left: 0; transform-origin: top left; }
