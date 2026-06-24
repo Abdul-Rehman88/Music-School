@@ -3,6 +3,8 @@
   import "./globals.css";
   import Navbar from "@/components/Navbar";
   import ThemeToggle from "@/components/ThemeToggle";
+  import { SmoothScrollProvider } from "@/components/ui/SmoothScrollProvider";
+
 
   const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -41,11 +43,14 @@
     }} />
   </head>
   <body className="min-h-full flex flex-col bg-[#f5f4ff] text-black dark:bg-black dark:text-white" suppressHydrationWarning>
-    <div className="relative w-full flex justify-center items-center">
-      <Navbar />
-    </div>
-    {children}
-    <ThemeToggle />
+    <SmoothScrollProvider>
+      <div className="relative w-full flex justify-center items-center">
+        <Navbar />
+      </div>
+      {children}
+      <ThemeToggle />
+   </SmoothScrollProvider>
+
   </body>
 </html>
     );
