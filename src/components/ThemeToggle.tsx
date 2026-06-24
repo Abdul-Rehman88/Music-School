@@ -8,7 +8,8 @@ export default function ThemeToggle() {
 
   useEffect(() => {
     const saved = localStorage.getItem("theme");
-    setIsDark(saved === "dark" || document.documentElement.classList.contains("dark"));
+    const dark = saved === "dark" || document.documentElement.classList.contains("dark");
+    setIsDark(dark);
   }, []);
 
   const toggle = () => {
@@ -18,7 +19,9 @@ export default function ThemeToggle() {
     setIsDark(nowDark);
     localStorage.setItem("theme", nowDark ? "dark" : "light");
 
-    // trigger spin
+    // notify other components
+    window.dispatchEvent(new CustomEvent("themechange", { detail: nowDark }));
+
     setSpinning(true);
     setTimeout(() => setSpinning(false), 400);
   };
