@@ -20,7 +20,7 @@ export const HoverEffect = ({
   return (
     <div
       className={cn(
-        "grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 md:gap-7.5 lg:gap-10 items-center justify-center",
+        "grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 md:gap-1 lg:gap-10 items-center justify-center",
         className
       )}
     >
@@ -35,7 +35,7 @@ export const HoverEffect = ({
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/80 block  rounded-3xl"
+                className="absolute inset-0 h-full w-full bg-neutral-300/30 dark:bg-slate-800/80 block  rounded-3xl"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
@@ -50,8 +50,8 @@ export const HoverEffect = ({
             )}
           </AnimatePresence>
           <Card>
-            <CardTitle >{item.title}</CardTitle>
-            <CardDescription>{item.description}</CardDescription>
+             <CardTitle className=" dark:text-alt-light text-alt-dark text-subheading font-medium ">{item.title}</CardTitle>
+            <CardDescription className=" dark:text-secondary-light text-secondary-dark text-secondary">{item.description}</CardDescription>
           </Card>
         </Link>
       ))}
@@ -69,7 +69,7 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full px-3.5 py-4 overflow-hidden bg-black border border-transparent dark:border-white/20 group-hover:border-slate-700 relative z-20",
+        "rounded-2xl h-full w-full px-3.5 py-4 overflow-hidden bg-alt-light dark:bg-alt-dark border border-neutral-200 group-hover:border-slate-300  dark:border-white/20 dark:group-hover:border-slate-700 relative z-20",
         className
       )}
     >
@@ -87,7 +87,7 @@ export const CardTitle = ({
   children: React.ReactNode;
 }) => {
   return (
-    <h4 className={cn("text-zinc-100 text-subheading font-medium tracking-wide mt-4 ", className)}>
+    <h4 className={cn("text-subheading font-medium tracking-wide mt-4 ", className)}>
       {children}
     </h4>
   );
@@ -102,7 +102,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        "mt-4 text-zinc-400 tracking-wide leading-relaxed text-secondary",
+        "mt-4  tracking-wide leading-relaxed text-secondary",
         className
       )}
     >
