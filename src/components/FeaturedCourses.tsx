@@ -23,7 +23,7 @@ function FeaturedCourses() {
             <h2 className="text-secondary-heading font-bold text-secondary-heading-light dark:text-secondary-heading-dark">Featured Courses</h2>
             <p className="text-[16px] md:text-[17px] text-text-light dark:text-text-dark">Explore our handpicked selection of courses designed to elevate your skills and knowledge.</p>
         </div>
-        <div className="min-w-full md:min-w-95 mt-10 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-7.5 lg:gap-10 items-center justify-center">
+        <div className="min-w-full md:min-w-95 mt-10 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 lg:gap-5 items-center justify-center">
           {featuredCourses.map((course:Course) => (
             <BackgroundGradient key={course.id } buttonLink="/" buttonLinkText="Learn more"  
               className="w-full flex flex-col rounded-[22px] bg-white dark:bg-zinc-900 overflow-hidden h-full max-w-sm">
