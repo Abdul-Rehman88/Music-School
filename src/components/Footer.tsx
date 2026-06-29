@@ -49,8 +49,8 @@ function Footer() {
 
         {/* Footer bottom  */}
         <div className="flex items-center justify-between pt-4 md:pt-6 lg:pt-8">
-            <p className="text-center text-[10px] text-black/70 dark:text-white/50 ">© 2026 Music School. All rights reserved.</p>
-            <p className="text-center text-[10px] text-black/70 dark:text-white/50 ">Design By Abdul Rehman</p>
+            <p className=" text-[10px] text-black/70 dark:text-white/50 ">© 2026 Music School. All rights reserved.</p>
+            <p className=" text-[10px] text-black/70 dark:text-white/50 ">Design By Abdul Rehman</p>
         </div>
     </footer>
   )
