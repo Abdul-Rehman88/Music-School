@@ -102,7 +102,7 @@ useEffect(() => {
 
   return (
     <motion.div
-      className="no-scrollbar relative flex h-136 overflow-y-auto rounded-md md:h-130"
+      className="no-scrollbar relative flex justify-center h-136 overflow-y-auto rounded-md md:h-130"
       ref={ref}
       data-lenis-prevent
 

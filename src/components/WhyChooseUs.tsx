@@ -60,8 +60,8 @@ const musicSchoolContent = [
 
 export default function WhyChooseUs() {
   return (
-    <div className="bg-primary-light dark:bg-primary-dark w-full px-4 py-5 md:px-7.5 md:py-12 lg:px-12.5 flex flex-col items-center ">
-      <StickyScroll content={musicSchoolContent} contentClassName=""  />
+    <div className="bg-primary-light dark:bg-primary-dark w-full px-4 py-5 md:px-7.5 md:py-12 lg:px-12.5 flex flex-col lg:items-center ">
+      <StickyScroll content={musicSchoolContent} contentClassName="" />
     </div>
   );
 }
