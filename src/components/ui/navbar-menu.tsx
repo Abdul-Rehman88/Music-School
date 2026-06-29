@@ -22,13 +22,12 @@ export const MenuItem = ({
   setActive: (item: string) => void;
   active: string | null;
   item: string;
-  href?: string;           // ← add this
+  href?: string;
   children?: React.ReactNode;
 }) => {
   return (
     <div onMouseEnter={() => setActive(item)} className="relative">
-      {/* If no children, render as a plain link */}
-      {href && !children ? (
+      {href ? (
         <Link href={href}>
           <motion.p
             transition={{ duration: 0.3 }}
@@ -46,7 +45,6 @@ export const MenuItem = ({
         </motion.p>
       )}
 
-      {/* Only show dropdown animation if children exist */}
       {children && active !== null && (
         <motion.div
           initial={{ opacity: 0, scale: 0.85, y: 10 }}
@@ -89,41 +87,10 @@ export const Menu = ({
   );
 };
 
-// export const ProductItem = ({
-//   title,
-//   description,
-//   href,
-//   src,
-// }: {
-//   title: string;
-//   description: string;
-//   href: string;
-//   src: string;
-// }) => {
-//   return (
-//     <a href={href} className="flex space-x-2">
-//       <img
-//         src={src}
-//         width={140}
-//         height={70}
-//         alt={title}
-//         className="shrink-0 rounded-md shadow-2xl"
-//       />
-//       <div>
-//         <h4 className="text-xl font-bold mb-1 text-black dark:text-white">
-//           {title}
-//         </h4>
-//         <p className="text-neutral-700 text-sm max-w-40 dark:text-neutral-300">
-//           {description}
-//         </p>
-//       </div>
-//     </a>
-//   );
-// };
-
 export const HoveredLink = ({ children, ...rest }: any) => {
   return (
-    <Link
+    <Link 
+      
       {...rest}
       className="text-white/80 dark:text-black/70 dark:hover:text-black/90 hover:text-white/90 "
     >

@@ -17,10 +17,9 @@ function Footer() {
             <div className="w-full">
               <h2 className="text-secondary-heading-light dark:text-secondary-heading-dark text-lg font-semibold mb-2 md:mb-4">Quick Links</h2>
               <ul className="flex flex-col gap-1.5">
-                <li><Link href="#" className="text-text-light dark:text-text-dark hover:text-black/90 dark:hover:text-white/90 transition-colors duration-300">Home</Link></li>
-                <li><Link href="#" className="text-text-light dark:text-text-dark hover:text-black/90 dark:hover:text-white/90 transition-colors duration-300">About</Link></li>
-                <li><Link href="#" className="text-text-light dark:text-text-dark hover:text-black/90 dark:hover:text-white/90 transition-colors duration-300">Courses</Link></li>
-                <li><Link href="#" className="text-text-light dark:text-text-dark hover:text-black/90 dark:hover:text-white/90 transition-colors duration-300">Contact</Link></li>
+                <li><Link href="/" className="text-text-light dark:text-text-dark hover:text-black/90 dark:hover:text-white/90 transition-colors duration-300">Home</Link></li>
+                <li><Link href="/courses" className="text-text-light dark:text-text-dark hover:text-black/90 dark:hover:text-white/90 transition-colors duration-300">Courses</Link></li>
+                <li><Link href="/contact" className="text-text-light dark:text-text-dark hover:text-black/90 dark:hover:text-white/90 transition-colors duration-300">Contact</Link></li>
               </ul>
             </div>
 
