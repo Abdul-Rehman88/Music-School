@@ -40,7 +40,6 @@ export const StickyScroll = ({
     setActiveCard(closestBreakpointIndex);
   });
 
-  // ===== Manual scroll hand-off so the outer page scroll never "sticks" =====
 // ===== Edge-of-box scroll hand-off to Lenis (native scroll otherwise) =====
 useEffect(() => {
   const el = ref.current;
@@ -92,8 +91,7 @@ useEffect(() => {
       ref={ref}
       data-lenis-prevent
         style={{
-    overscrollBehavior: "contain",
-    WebkitOverflowScrolling: "touch",
+    WebkitOverflowScrolling: "touch", // keep this for iOS momentum
   }}
 
     >
@@ -124,7 +122,7 @@ useEffect(() => {
               </motion.p>
             </div>
           ))}
-          <div className="h-40" />
+          <div className="md:h-47 lg:h-50" />
         </div>
       </div>
       <div
