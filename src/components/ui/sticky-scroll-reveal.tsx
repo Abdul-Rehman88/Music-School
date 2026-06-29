@@ -41,30 +41,19 @@ export const StickyScroll = ({
   });
 
   // ===== Manual scroll hand-off so the outer page scroll never "sticks" =====
+// ===== Edge-of-box scroll hand-off to Lenis (native scroll otherwise) =====
 useEffect(() => {
   const el = ref.current;
   if (!el) return;
 
-  let targetScroll = el.scrollTop;
-  let currentScroll = el.scrollTop;
-  let rafId: number;
-
-  const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
-
-  const animate = () => {
-    currentScroll = lerp(currentScroll, targetScroll, 0.1);
-    el.scrollTop = currentScroll;
-    rafId = requestAnimationFrame(animate);
-  };
-  rafId = requestAnimationFrame(animate);
-
   const handleWheel = (e: WheelEvent) => {
-    const { scrollHeight, clientHeight } = el;
-    const isAtTop = targetScroll <= 0;
-    const isAtBottom = targetScroll >= scrollHeight - clientHeight - 1;
+    const { scrollTop, scrollHeight, clientHeight } = el;
+    const isAtTop = scrollTop <= 0;
+    const isAtBottom = scrollTop >= scrollHeight - clientHeight - 1;
     const scrollingDown = e.deltaY > 0;
     const scrollingUp = e.deltaY < 0;
 
+    // Only intervene right at the edges — otherwise let native scroll run at full speed
     if ((isAtBottom && scrollingDown) || (isAtTop && scrollingUp)) {
       e.preventDefault();
       if (lenisInstance) {
@@ -73,17 +62,14 @@ useEffect(() => {
           duration: 0.6,
         });
       }
-      return;
     }
-
-    e.preventDefault();
-    targetScroll = Math.max(0, Math.min(scrollHeight - clientHeight, targetScroll + e.deltaY));
+    // else: do nothing, let the browser handle the wheel scroll natively
   };
 
   el.addEventListener("wheel", handleWheel, { passive: false });
+
   return () => {
     el.removeEventListener("wheel", handleWheel);
-    cancelAnimationFrame(rafId);
   };
 }, []);
 
@@ -105,6 +91,10 @@ useEffect(() => {
       className="no-scrollbar relative flex justify-center h-136 overflow-y-auto rounded-md md:h-130"
       ref={ref}
       data-lenis-prevent
+        style={{
+    overscrollBehavior: "contain",
+    WebkitOverflowScrolling: "touch",
+  }}
 
     >
       <div className="div relative flex w-full items-start pr-0 md:pr-6">
