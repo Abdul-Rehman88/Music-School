@@ -16,7 +16,7 @@ function page() {
     <div className="min-h-screen overflow-hidden px-4 md:px-7.5 lg:px-12.5  py-8 pt-36">
         <h1 className="text-primary-heading text-center font-sans font-bold mb-8 text-white">All courses ({courseData.courses.length})</h1>  
         <div className="flex flex-wrap justify-center">
-            {courseData.courses.map((course) => (
+            {courseData.courses.map((course:Course) => (
                 <CardContainer key={course.id} className="inter-var m-4">
                 <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/10 dark:bg-black dark:border-white/20 border-black/10 w-auto sm:w-85 md:w-80 lg:w-85 h-auto rounded-xl p-6 border  ">
                   <CardItem
