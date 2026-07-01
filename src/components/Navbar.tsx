@@ -9,7 +9,7 @@ export default function Navbar({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "fixed top-10 inset-x-0 px-4 md:px-7.5 lg:px-12.5 max-w-2xl w-[85%] md:w-[80%] mx-auto z-50",
+        "fixed top-10 inset-x-0 px-0 md:px-7.5 lg:px-12.5 max-w-2xl w-[90%] md:w-[80%] mx-auto z-50",
         className
       )}
     >
