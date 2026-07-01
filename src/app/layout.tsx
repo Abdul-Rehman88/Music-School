@@ -20,6 +20,9 @@ import Footer from "@/components/Footer";
   export const metadata: Metadata = {
     title: "Sonder Music School",
     description: " A music school for self-expression. Sonder blends personalized instruction with a visually striking, modern web experience that reflects the creativity it teaches.",
+    icons:{ 
+      icon: "/favicon.svg",
+    }
   };
 
   export default function RootLayout({
