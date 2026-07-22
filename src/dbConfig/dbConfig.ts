@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 export async function connectDB()  {
 
     try {
-        const uri = process.env.MONGODB_URI;
+        const uri = process.env.MONGO_URI;
         
         // Check if MONGODB_URI is defined
         if(!uri){
@@ -25,7 +25,7 @@ export async function connectDB()  {
         });
 
         await mongoose.connect(uri);
-        console.log("Connected to MongoDB"); //remove this after deployment
+        console.log("Connection started to MongoDB"); //remove this after deployment
    
     } catch (error) {
         console.error("Error in connection to MongoDB",error);
