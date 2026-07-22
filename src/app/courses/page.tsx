@@ -1,6 +1,5 @@
 'use client'
 import Image from "next/image";
-import React from "react";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import courseData from "@/data/music_courses.json"
 
@@ -13,7 +12,7 @@ function page() {
     }
 
   return (
-    <div className="min-h-screen overflow-hidden px-4 md:px-7.5 lg:px-12.5  py-8 pt-36">
+    <div className="min-h-screen overflow-hidden px-4 md:px-7.5 lg:px-12.5 py-8 pt-36">
         <h1 className="text-primary-heading text-center font-bold mb-8 text-primary-heading-light dark:text-primary-heading-dark">All courses ({courseData.courses.length})</h1>  
         <div className="flex flex-wrap justify-center">
             {courseData.courses.map((course:Course) => (
